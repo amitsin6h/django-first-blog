@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Django Girls's</title>
+<link rel="stylesheet" href="{% static 'css/main.css' %}" >
+</head>
+<body>
+	<div id="mastwrap">
+ 		<header role="banner" id="masthead" class="clearfix">
+  			<div id="navwrap">
+  				<nav role="navigation"> 
+  					<ul id="topnav" class="topnav">
+    					<li><a href="#" class="active">Blog</a></li>
+            			<li><a href="#">About</a></li>
+        	 		</ul>
+				</nav>
+   			</div>
+		</header>
+	</div>
+  <div id="sitewrap">
+    	<section id="content" class="body">
+    		{% block content %}
+        
+        {% endblock %}
+		</section>
+	</div>
+	<div id="footwrap">
+    <footer id="footer" class="clearfix">
+  <div class="footer_center">
+    <ul id="footnav">
+      <li><a href="#" title="Home">Home</a></li>
+      <li><a href="#" class="feed" title="Subscribe via Atom Feed">Feed</a></li>
+    </ul>
+    <a href="#" class="back_up" title="Back to the top"><i>↑</i></a>
+  </div>
+</footer>
+  </div>
+	</body>
+</html>

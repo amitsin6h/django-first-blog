@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+  <div id="sitewrap">
+    	<section id="content" class="body">
+    		{% block content %}
+    		{% for post in posts %}
+  				<header>
+    				<h2 class="entry-title">
+     				 	<a rel="bookmark">{{ post.title}}</a>
+     				</h2>
+     				<h3>
+     				 	<a class="next">Posted by <span class="caps">{{ post.author }}</span> on {{ post.published_date|date }}</a>
+     				</h3>
+     			</header>
+			{% endfor %}
+            {% if post.text %}
+                    <p>{{ post.text|linebreaks }}</p>
+                    {% endif %}
+			{% endblock %}
+		</section>
+	</div>
+	
