@@ -2,5 +2,5 @@
 __pycache__
 django-tuts
 db.sqlite3
-/static
+/templates
 .DS_Store
